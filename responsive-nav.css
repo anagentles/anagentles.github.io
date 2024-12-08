@@ -1,0 +1,118 @@
+/*! responsive-nav.js 1.0.39 by @arielsalminen */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-collapse.opened a {
+  color: #202C59;
+  text-decoration: none;
+}
+
+.nav-collapse.opened a:hover {
+  text-decoration: underline;
+}
+
+.nav-toggle {
+  text-indent: -300px;
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 60px;
+  float: right;
+  text-decoration: none;
+  grid-column: 6/6;
+}
+
+.nav-toggle:before {
+  color: #202C59; 
+  font: normal 42px/76px "responsivenav"; 
+  text-transform: none;
+  text-align: center;
+  position: absolute;
+  content: "\2261"; 
+  text-indent: 0;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.nav-toggle.active:before {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  content: "\78"; 
+}
+
+.nav-toggle a {
+  color: #202C59;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+
+  .nav-collapse a {
+    color: #202C59;
+    text-decoration: none;
+  }
+
+  .nav-collapse ul {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 15px 0 15px 0;
+    font-weight: bold;
+    list-style: none;
+    color: #202C59;
+  }
+
+  .nav-collapse li {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #202C59;
+  }
+
+  .nav-collapse li:hover {
+    text-decoration: underline;
+  }
+
+  .js .nav-collapse.closed {
+    max-height: none;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-family: "lato", sans-serif;
+    color: #202C59;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+

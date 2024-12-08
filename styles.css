@@ -1,0 +1,359 @@
+*, html, body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0; 
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: auto;
+    min-height: 100vh;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header" "section" "aside" "content" "article" "footer";
+}
+
+header {
+    display: grid;
+    grid-area: header;
+    grid-row: 1;
+    padding: 10px;
+    font-size: 1em;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Tinos", serif;
+    font-style: normal;
+    color: #202C59;
+}
+
+header h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Tinos", serif;
+    font-style: normal;
+    color: #6BBAEC;
+}
+
+.nav-collapse {
+    grid-column: 6/6;
+}
+
+hr.solid {
+    border-top: 2px solid #202C59;
+    grid-column: span 6;
+}
+
+h3 {
+    padding: 10px;
+    font-size: 2em;
+    font-family: "Tinos", serif;
+    font-weight: bold;
+    color: #202C59;
+}
+
+h4 {
+    padding: 10px;
+    font-size: 1.2em;
+    font-family: "Tinos", serif;
+    color: #202C59;
+    font-weight: bold;
+}
+
+.button {
+    display: grid;
+    color: white;
+    padding: 10px;
+    background-color: #202C59;
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    border-radius: 8px;
+    width: 60%;
+    margin: 20px;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #A5CC6B;
+    cursor: pointer;
+    color: #202C59;
+}
+
+figcaption {
+    font-size: 12px;
+    text-align: center;
+}
+
+section {
+    display: grid;
+    grid-row: 2;
+    grid-area: section;
+    padding: 10px;
+    margin: 0 0 20px 0;
+}
+
+.section {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px #dddbdb;
+    border-radius: 10px;
+}
+
+aside {
+    grid-area: aside;
+    background-color: white;
+    padding: 10px;
+    grid-row: 3;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+}
+.no-resize {
+    resize: none;
+}
+
+.box-shadow {
+    box-shadow: 0 0 10px #dddbdb;
+}
+
+fieldset {
+    border: none;
+    width: auto;
+}
+
+form {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h5 {
+    padding: 10px 0 15px 0;
+    font-weight: bold;
+    font-family: "Tinos", serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: #202C59;
+}
+
+.aside {
+    border-radius: 10px;
+    max-width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px #dddbdb;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid black;
+    font-size: 16px;
+    margin: 15px;
+    outline: 0;
+    padding: 15px;
+    border-radius: 5px;
+    width: 85%;
+    background-color: #f5f5f5;
+    margin-bottom: 30px;
+    caret-color: #202C59;
+}
+
+input[type="checkbox"] {
+    font-size: 16px;
+    padding: 15px 0 0 20px;
+    color: #202C59;
+    margin: 0 4px 15px 0;
+}
+
+input:hover,
+textarea:hover {
+    border: 2px solid #202C59;
+}
+
+label[for="name"],
+label[for="email"],
+label[for="Info"],
+label[for="major"] {
+    display: block;
+    padding: 0 0 5px 15px;
+    margin-bottom: 5px;
+    color: #202C59;
+    font-family: "tinos", serif;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    color: white;
+    border: none;
+    background-color: #202C59;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #A5CC6B;
+    cursor: pointer;
+    color: #202C59;
+}
+
+.img-div {
+    height: 300px;
+    max-width: 100%;
+    position: relative; 
+    grid-area: article;
+    padding: 0 0 0 10px;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+}
+
+.lab-image {
+    height: 300px;
+    max-width: 100%;
+    position: relative; 
+    padding: 20px 0 0 0;
+    box-shadow: #dddbdb;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+}
+
+.unc-campus {
+    height: 100%;
+    max-width: 100%;
+    position: relative; 
+    grid-area: article;
+    box-shadow: 0 0 10px #dddbdb;
+    border-radius: 10px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+main {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    grid-template-columns: 1fr;
+    grid-row: 4;
+    flex-wrap: wrap;
+    padding: 0 10px 0 10px;
+    margin: 0 0 20px 0;
+}
+
+.main {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px #dddbdb;
+    border-radius: 10px;
+}
+
+h6 {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Tinos", serif;
+    text-align: center;
+    color: #202C59;
+    padding: 15px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    grid-row: 6;
+    grid-area: footer;
+    background-color: #202C59;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+h7 {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Tinos", serif;
+    color: #6BBAEC;
+}
+
+p {
+    font-family: "Lato", serif;
+    font-style: normal;
+    color: #202C59;
+}
+
+@media screen and (min-width: 700px) {
+    .grid-container {
+        display: grid;
+        grid-gap: 10px;
+        width: 95%;
+        height: 100vh;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr ;
+        grid-template-areas: "header header header" "section aside aside" "article content content" "footer footer footer";
+    }
+
+    .section {
+        display: flex;
+    }
+
+    .aside {
+        border-radius: 10px;
+    }
+
+    section {
+        display: grid;
+        grid-row: 2;
+        grid-area: section;
+        padding: 10px 0 10px 10px;
+    }
+
+    aside {
+        grid-area: aside;
+        grid-row: 2;
+        border-radius: 10px;
+    }
+
+    main {
+        grid-area: content;
+        grid-row: 3;
+        margin: 0 0 20px 0;
+    }
+
+    footer {
+        display: flex;
+        grid-row: 4;
+        grid-area: footer;
+    }
+}
